@@ -7,8 +7,8 @@ const LivePreview = () => {
             See it in <span className="text-purple-600">action</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Here's what your portfolio could look like. Beautiful, professional,
-            and ready to impress.
+            Here&apos;s what your portfolio could look like. Beautiful,
+            professional, and ready to impress.
           </p>
         </div>
 

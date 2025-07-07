@@ -59,7 +59,7 @@ const Testimonials = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed italic">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
 
               <div className="flex text-yellow-400 mt-4">
