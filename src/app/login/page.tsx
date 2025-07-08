@@ -14,6 +14,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import logo from "../../../public/images/shareframe-logo-nobg.png";
 
 export default function LoginPage() {
@@ -40,10 +41,11 @@ export default function LoginPage() {
 
         {/* Logo */}
         <div className="text-center mb-8">
-          <img
-            src={logo.src}
+          <Image
+            src={logo}
             alt="ShareFrame Logo"
             className="w-32 h-auto mx-auto mb-4"
+            priority
           />
           <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
           <p className="text-gray-600 mt-2">
@@ -140,7 +142,7 @@ export default function LoginPage() {
               <Separator className="my-4" />
               <div className="text-center">
                 <p className="text-sm text-gray-600">
-                  Don't have an account?{" "}
+                  Don&apos;t have an account?{" "}
                   <Link
                     href="/signup"
                     className="text-primary hover:text-primary/80 font-medium transition-colors">

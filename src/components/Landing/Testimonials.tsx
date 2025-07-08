@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -45,9 +47,11 @@ const Testimonials = () => {
               key={index}
               className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-full object-cover mr-4"
                 />
                 <div>

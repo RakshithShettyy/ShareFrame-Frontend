@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import logo from "../../../public/images/shareframe-logo-nobg.png";
 
 const navLinks = [
@@ -19,7 +20,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 py-12">
         {/* Logo/Brand */}
         <a href="#hero" className="text-2xl font-bold text-primary">
-          <img src={logo.src} alt="ShareFrame Logo" className="w-65 h-35" />
+          <Image
+            src={logo}
+            alt="ShareFrame Logo"
+            className="w-65 h-35"
+            priority
+          />
         </a>
 
         {/* Desktop Nav */}
