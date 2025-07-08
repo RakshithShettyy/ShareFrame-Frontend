@@ -22,7 +22,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -31,6 +31,20 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+
+          {/* Auth Buttons */}
+          <div className="flex items-center space-x-3 ml-6">
+            <a
+              href="/login"
+              className="text-gray-700 hover:text-primary transition-colors font-medium">
+              Login
+            </a>
+            <a
+              href="/signup"
+              className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+              Sign Up
+            </a>
+          </div>
         </div>
 
         {/* Mobile Hamburger */}
@@ -55,6 +69,22 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+
+            {/* Mobile Auth Buttons */}
+            <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200 mt-4">
+              <a
+                href="/login"
+                className="text-gray-700 hover:text-primary py-2 px-2 rounded transition-colors font-medium"
+                onClick={() => setMenuOpen(false)}>
+                Login
+              </a>
+              <a
+                href="/signup"
+                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
+                onClick={() => setMenuOpen(false)}>
+                Sign Up
+              </a>
+            </div>
           </div>
         </div>
       )}
