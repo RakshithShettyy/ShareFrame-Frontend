@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../../public/images/shareframe-logo-nobg.png";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -15,10 +16,10 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 py-12">
         {/* Logo/Brand */}
         <a href="#hero" className="text-2xl font-bold text-primary">
-          ShareFrame
+          <img src={logo.src} alt="ShareFrame Logo" className="w-65 h-35" />
         </a>
 
         {/* Desktop Nav */}
@@ -33,18 +34,18 @@ const Navbar = () => {
           ))}
 
           {/* Auth Buttons */}
-          <div className="flex items-center space-x-3 ml-6">
-            <a
-              href="/login"
-              className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Login
-            </a>
-            <a
-              href="/signup"
-              className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium">
-              Sign Up
-            </a>
-          </div>
+        </div>
+        <div className="flex items-center space-x-3 ml-6">
+          <a
+            href="/login"
+            className="text-gray-700 hover:text-primary transition-colors font-medium">
+            Login
+          </a>
+          <a
+            href="/signup"
+            className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+            Sign Up
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
